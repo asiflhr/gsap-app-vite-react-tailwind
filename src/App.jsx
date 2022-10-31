@@ -1,34 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React, { useRef, useLayoutEffect } from "react";
+import { gsap } from "gsap";
+import Anim1 from "./components/Anim1";
+import Anim2 from "./components/Anim2";
+import Anim3 from "./components/Anim3";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const comp = useRef();
+
+  useLayoutEffect(() => {
+    // animation code here
+    let ctx = gsap.context(() => {
+      // gsap.to(".box", { rotation: "+=360" });
+      gsap.to(".animate", {
+        x: 100,
+        y: 50,
+        repeat: -1,
+        repeatDelay: 1,
+        yoyo: true,
+      });
+    }, comp);
+
+    return () => ctx.revert();
+  });
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <>
+      <Anim1 />
+      <Anim2 />
+      <Anim3 />
+    </>
+  );
 }
 
-export default App
+export default App;

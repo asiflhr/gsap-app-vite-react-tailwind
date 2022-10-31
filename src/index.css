@@ -11,14 +11,19 @@
   }
 
   /* container */
-  .nike-container {
+  .container {
     @apply w-11/12 m-auto;
+  }
+
+  .content-center {
+    @apply flex gap-10 items-center justify-center;
   }
 
   /* Scroll */
   .scroll-hidden::-webkit-scrollbar {
     display: none;
   }
+
   .scroll-style::-webkit-scrollbar {
     scroll-behavior: smooth;
     scrollbar-width: thin;
@@ -63,7 +68,7 @@
 
   /* text-gradient */
   .text-gradient {
-    @apply text-transparent bg-clip-text bg-gradient-to-tr from-blue-500 to-sky-500;
+    @apply text-transparent bg-clip-text bg-gradient-to-tr from-blue-700 to-sky-500;
   }
 
   /* border */
