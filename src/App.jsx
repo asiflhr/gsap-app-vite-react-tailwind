@@ -5,6 +5,7 @@ import Anim2 from "./components/Anim2";
 import Anim3 from "./components/Anim3";
 import Anim4 from "./components/Anim4";
 import Anim5 from "./components/Anim5";
+import Anim6 from "./components/Anim6";
 
 function App() {
   const comp = useRef();
@@ -32,6 +33,7 @@ function App() {
       <Anim3 />
       <Anim4 />
       <Anim5 />
+      <Anim6 />
     </>
   );
 }
