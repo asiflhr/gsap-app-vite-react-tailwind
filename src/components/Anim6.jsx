@@ -1,11 +1,11 @@
-import React, { useRef, useEffect, useState, useLayoutEffect } from "react";
+import React from "react";
 import { gsap } from "gsap";
 
 // Animating on interaction
 
 const Anim6 = () => {
   const onEnter = ({ currentTarget }) => {
-    gsap.to(currentTarget, { backgroundColor: "bg-rose-600", scale: 1.2 });
+    gsap.to(currentTarget, { backgroundColor: "#e77614", scale: 1.2 });
   };
 
   const onLeave = ({ currentTarget }) => {
