@@ -1,5 +1,6 @@
 import React, { useRef, useState, useLayoutEffect } from "react";
 import { gsap } from "gsap";
+//      Passing down a timeline prop
 
 const Box = ({ children, timeline, index }) => {
   const el = useRef();
@@ -34,7 +35,6 @@ const Circle = ({ children, timeline, index, rotation }) => {
   );
 };
 
-//      Passing down a timeline prop
 const Anim8 = () => {
   const [reversed, setReversed] = useState(false);
   const [tl, setTl] = useState();
